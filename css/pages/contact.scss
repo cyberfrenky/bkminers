@@ -1,0 +1,13 @@
+.contact-section{
+    color: $link-Active-color;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+
+@media only screen and (max-width:850px){
+    .list-unstyled{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,41 @@
+// partners section
+.partners{
+    position: static;
+    bottom: 20%;
+    left: 0;
+    .list-item-link{
+        margin: 0 10px;
+    }
+}
+.partners-header{
+    color: $special-color;
+    text-align: center;
+    font-size: 60px;
+}
+.partners-list{
+    @include flex-center-row;
+    @include reset-list;
+    padding: 30px;
+}
+.partners-logo{
+    @include shadow;
+    @include transition-default;
+    max-height: 100px;
+    border-radius: 10%;
+
+    &:hover{
+        scale: 1.1;
+    }
+}
+@media only screen and (max-width:850px){
+    .partners-header{
+        font-size: 35px;
+    }
+    .partners-list{
+        @include flex-center-col;
+        .partners-logo{
+            margin: 10px;
+        }
+    }
+}
+

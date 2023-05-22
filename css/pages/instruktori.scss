@@ -1,0 +1,141 @@
+// instruktori.html
+
+.main-instruktori{
+    @include flex-center-col;
+    .container-xl{
+        max-width: 1000px;
+    }
+    .headline{
+        width: auto;
+        text-align: center;
+        padding: 40px;
+    }
+    .headline-info-img{
+        @include shadow;
+        max-height: 300px;
+        border-radius: 50px;
+    }
+    .headline-info-text{
+        @include shadow;
+        margin: 50px 0;
+        padding: 10px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        color: $special-color;
+        background-color: $black-color;
+        border-radius: 25px;
+    }
+    .header-img{
+        border-radius: 20%;      
+        max-width: 100px
+
+    }
+    .instruktor{
+        @include flex-center-row;
+        @include shadow;
+        @include transition-default;
+        justify-content: space-between;
+        text-align: left;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px;
+        height: 250px;
+        color: $special-color;
+        background-image: url("../img/miners2.png") ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-x: right;
+        background-position-y: center; 
+        
+        &:hover{
+            scale: 1.1;
+        }
+    }
+    .instruktor-link{
+        @include reset-link;
+    }
+
+    .ika,.vlada,.jova,.zivko{
+        position: relative;
+        &::before,&::after{
+            @include pseudo;
+            height: 250px;
+            width: 250px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 50px;
+        }
+        &::before{
+            background-image: url("../img/ika\ nikolic.jpg");
+            left: -30%;
+        }
+        &::after{
+            background-image: url("../img/ika5.jpg");            
+            right: -30%;
+        }
+        
+    }
+    .vlada{
+        &::before{
+            background-image: url("../img/vlada\ mma.jpg");
+            
+        }
+        &::after{
+            background-image: url("../img/vlada\ i\ necak.jpg");            
+            
+        }
+    }
+
+    .zivko{
+        &::before{
+            background-image: url("../img/zivko2.jpg");
+            
+        }
+        &::after{
+            background-image: url("../img/zivko-i-vlada.jpg");            
+            
+        }
+    }
+    .jova{
+        &::before{
+            background-image: url("../img/jova-miljan-zivko.jpg");
+            
+        }
+        &::after{
+            background-image: url("../img/jova-kruska.jpg");            
+            
+        }
+    }
+    
+}
+
+
+
+@media only screen and (max-width:850px){
+    
+.main-instruktori{
+    .headline-info-img{
+        max-height: 150px;
+    }
+    .headline-info-text{
+        color: $link-Active-color;
+        padding: 40px;
+    }
+    .instruktor{
+        text-align: center;
+        height: auto;
+        &::before,&::after{
+            display: none;
+        }
+        .header-img{
+            max-width: auto;
+        }
+        .instructor-info{
+            margin: 50px 0 0 0;
+        }
+    }
+}
+}
+

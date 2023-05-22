@@ -1,0 +1,5 @@
+.card,.card-body{
+    @include shadow;
+    background-color: transparent;
+    color: $link-Active-color;
+}

@@ -1,0 +1,70 @@
+.main-skola{
+    @include flex-center-col;
+
+    
+    .header{
+
+        margin: 10px;
+        padding: 10px 50px;
+        border-radius: 25px;
+        text-align: center;
+        font-size: 70px;
+        color: $link-Active-color;
+    }
+    .heading-text{
+        max-width: 800px;
+        color: $link-Active-color;
+        font-size: 30px;
+        text-align: center;
+        
+    }
+    .content{
+        @include shadow;
+        display: flex;
+        font-size: 20px;
+        padding: 10px;
+        margin: 40px 5px;
+        border-radius: 25px;
+        background-color: $black-color-transparent;
+        text-align: center;
+        color: $link-passive-color;
+        .link{
+            @include shadow;
+        }
+        .content-heading{
+            min-width: 200px;
+            @include flex-center-col;
+            color: $link-Active-color;
+        }
+        .paragraph{
+            font-size: 25px;
+        }
+        .content-link{
+            @include transition-default;
+            color: $link-Active-color;
+            &:hover{
+                text-decoration: none;
+                scale: 1.2;
+            }
+        }
+        .picture{
+            max-width: 400px;
+            aspect-ratio: 4/3;
+            box-sizing: contain;
+
+        }
+        .content-img{
+            @include flex-center-col;
+        }
+    }
+}
+
+@media only screen and (max-width:850px){
+    .content{
+        @include flex-center-col;
+        .paragraph{
+            padding: 10px;
+        }
+        
+    }
+}

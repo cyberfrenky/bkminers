@@ -1,0 +1,99 @@
+// O-NAMA.html settings
+
+
+.main-oNama{
+    @include flex-center-col;
+    .main-header{
+        @include flex-center-col;
+        justify-content: flex-start; 
+        text-align: center; 
+        margin: 20px 0;
+        .header-text{
+            color: $link-Active-color;
+            font-size: 30px;
+        }
+        
+        .headline{
+            text-align: center;
+            font-size: 70px;
+            border-radius: 20%;
+            padding: 20px;
+        }
+        .header-img{
+            @include shadow;
+            border-radius: 50%;
+            border: 10px solid $primary-color;
+            max-width: 300px;
+            margin: 30px;
+
+        }
+       
+    }
+    .main-content{
+        @include flex-center-row;
+        padding: 50px;
+        .pic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    .content-headline,.content-text,.content-list{
+        background-color: $black-color-transparent;
+        color: $special-color;
+        font-weight: 700;
+        padding: 20px;
+    }
+    .content-headline{
+        font-size: 56px;        
+        margin-bottom: 0;
+        width: auto;
+        
+    }
+    .content-text{
+        @include shadow;
+        margin: 0;
+        font-size: 24px;
+        border-radius: 25px 25px 0 0;
+        
+    }
+    .content-list{
+        @include flex-center-col;
+        @include shadow;
+        align-items: start;
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 20px;
+        border-radius: 0 0 25px 25px ;
+    }
+    .content-img{
+        @include shadow;
+        width: 80%;
+        border-radius: 50%;
+    }
+}
+
+
+
+@media only screen and (max-width:850px){
+    .main-oNama{
+        text-align: center;
+        border-radius: 0;
+        .main-header{
+            justify-content: center;
+        }
+        .main-content{
+            padding: 0;
+            .list{
+                @include flex-center-col;
+            }
+        }
+        .main-header,.headline,.main-content{
+            border-radius: 0;
+        }
+    }
+
+}
+

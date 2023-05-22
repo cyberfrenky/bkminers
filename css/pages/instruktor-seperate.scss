@@ -1,0 +1,64 @@
+// Personal insturktor page settings
+.main-personal{
+    .personal-headline{
+        margin: 20px;
+        .personal-head-text{
+            @include shadow;
+            padding: 20px;
+            border-radius: 25px;
+            color: $link-Active-color;
+            
+        }
+    }
+    .personal-img{
+        margin: 40px 0;
+    }
+    .personal-picture{
+        @include shadow;
+        max-height: 400px;
+        border-radius: 25px;
+    }
+    .personal-info-header{
+        @include shadow;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 50px;
+        text-align: center;
+
+    }
+    .personal-info{
+        @include shadow;
+        font-size: 20px;
+        text-align: justify;
+        color: $primary-color;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 25px;
+    }
+    .personal-info-header{
+        color: $link-Active-color;
+    }
+
+    .personal-info-img{
+        border-radius: 50px;
+    }
+}
+
+@media only screen and (max-width:850px){
+    .personal-picture{
+        max-width: 100%;
+    }
+    .personal-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .personal-info-text{
+            color: $link-Active-color;
+        }
+        .personal-info-img{
+            width: 100%;
+        }
+
+    }
+}

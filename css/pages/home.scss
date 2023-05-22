@@ -1,0 +1,102 @@
+
+// main section settings
+.info{
+    
+    @include flex-center-col;
+    background-color: $link-passive-color;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 50px;
+}
+.info-header{
+    @include flex-center-row;
+    background-image: url('../img/hands.jpg');
+    background-position-x: center;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-color: $black-color;
+    height: 500px;
+    align-items: flex-start;
+    border-radius: 5% 5% -50% -50%;
+    .headline{
+        background-color: $black-color-transparent;
+    }
+    
+}
+.headline{
+    color: $link-Active-color;
+
+    font-size: 90px;
+}
+
+.info-text{
+    background-color: $black-color;
+    color: $special-color;
+    margin: 0;
+    text-align: justify;
+    max-width: 700px;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 20px;
+    
+}
+
+.pic-img{
+    width: 100%;
+}
+.main-wrapper{
+    background-image: url('../img/3D-Fire-Boxing.jpg');
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain;    
+    background-color: $black-color;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        width: 650px;
+        height: 800px;
+        position: absolute;
+        left: 0;
+        content: "";
+        top: 50%;
+        background-image: url('../img/bag2.jpg');
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: contain; 
+        border-radius: 50% 0 0 50%;
+        z-index: -1;
+    }
+    &::after{
+        width: 650px;
+        height: 800px;
+        position: absolute;
+        right: 0;
+        content: "";
+        top: 50%;
+        background-image: url('../img/kick.jpg');
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}
+
+
+
+.info-content{
+    padding: 20px 0;
+}
+
+.content-link{
+    @include reset-link;
+    color: $link-passive-color;
+    font-size: 25px;
+    font-weight: 700;
+    &:hover{
+        text-decoration: underline;
+        color: $link-Active-color;
+    }
+}
+

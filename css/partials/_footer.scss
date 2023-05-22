@@ -1,0 +1,30 @@
+// footer
+.footer-wrapper{
+    background-color: $secondary-color;
+}
+
+.footer-wrapper{
+    position: static;
+    bottom: 0;
+    padding-top: 25px;
+    
+}
+.footer{
+    min-height: 150px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.footer-contact{
+    
+    .list-item-link{
+        @include flex-center-row;
+        @include link-bubble;
+        font-size: 40px;
+        margin: 10px;
+        
+        
+    }
+}

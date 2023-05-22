@@ -1,0 +1,48 @@
+// Gallery settings
+
+.main-gallery-wrapper{
+
+    .main-gallery{
+        background-image: url("../img/miners2.png");
+        background-size: contain;
+        margin: 20px;
+        border-radius: 20px;
+        
+        .content-picture{
+            @include transition-default;
+            @include shadow;
+            margin: 20px;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            &:hover{
+                scale: 1.1;
+            }
+        }
+        .header{
+            font-size: 70px;
+            padding: 20px;
+            text-align: center;
+            color: $link-Active-color;  
+        }
+        
+    }
+    .content{
+        @include flex-center-row;
+        flex-wrap: wrap;
+    }
+    .gallery-content{
+        @include flex-center-row;
+        flex-wrap: wrap;
+        
+    }
+    .heading{
+        
+        border-top: 1px solid $link-passive-color;
+        border-bottom: 1px solid $link-passive-color;
+        .header{          
+            color: $link-passive-color;  
+            font-size: 50px;
+        }
+    }
+}
